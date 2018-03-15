@@ -1,9 +1,16 @@
-<ion-view view-title="Enfants">
+<ion-view view-title="Enfants" style="background-color:#442178ff!important;">
 
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="child in children" href="#/app/children/{{child.id}}">
-               <i class="icon ion-happy-outline"></i> {{child.name}}
+            <ion-item  ng-repeat="child in children" href="#/app/children/{{child.id}}">
+                <h2>Item</h2>
+                <p>Item Paragraph</p>
+
+                <ion-thumbnail item-end>
+                    <img src="img/chapeau-storigin.svg">
+                </ion-thumbnail>
+
+                <i class="icon ion-happy-outline"></i> {{child.name}}
                 <ion-option-button class="button-light icon ion-heart"></ion-option-button>
                 <ion-option-button class="button-light icon ion-email"></ion-option-button>
                 <ion-option-button class="button-assertive icon ion-trash-a"></ion-option-button>
