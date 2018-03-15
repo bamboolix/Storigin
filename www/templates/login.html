@@ -1,0 +1,26 @@
+<ion-modal-view style="background-color:#2c3e50!important">
+  <!-- <ion-header-bar style="background-color:#2c3e50!important;">
+     <h1 class="title" style="color:#ffffff!important;text-align:center">Connexion</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>-->
+  <ion-content style="text-align:center">
+    <form ng-submit="doLogin()">
+      <div class="list" style="background-color:#2c3e50!important">
+        <img width="300px" height="300px" src="img/owl.svg"/>
+        <label class="item item-input">
+          <span class="input-label">identifiant</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">mot de passe</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item" style="background-color:#2c3e50!important" >
+          <button class="button button-block button-positive" style="border-color:#ffffffbackground-color:#2c3e50!important;color:#ffffff" type="submit">se connecter</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

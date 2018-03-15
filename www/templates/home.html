@@ -1,0 +1,13 @@
+<ion-view view-title="Enfants">
+
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="child in children" href="#/app/children/{{child.id}}">
+               <i class="icon ion-happy-outline"></i> {{child.name}}
+                <ion-option-button class="button-light icon ion-heart"></ion-option-button>
+                <ion-option-button class="button-light icon ion-email"></ion-option-button>
+                <ion-option-button class="button-assertive icon ion-trash-a"></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
