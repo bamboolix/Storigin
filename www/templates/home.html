@@ -1,8 +1,12 @@
 <ion-view view-title="Enfants" style="background-color:#442178ff!important;">
-
+    <style>
+        .item .item-content{
+             background-color: transparent !important;
+        }
+    </style>
     <ion-content>
         <ion-list>
-            <ion-item  ng-repeat="child in children" href="#/app/children/{{child.id}}">
+            <ion-item style="background-color:#442178!important;" ng-repeat="child in children" href="#/app/children/{{child.id}}">
                 <h2>Item</h2>
                 <p>Item Paragraph</p>
 
