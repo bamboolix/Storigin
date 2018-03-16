@@ -66,16 +66,6 @@ angular.module('starter.controllers', [])
     $scope.closeLogin();
   };
 })
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
 .controller('HomeCtrl', function($scope)
 {
   $scope.children = [
@@ -85,6 +75,4 @@ angular.module('starter.controllers', [])
     { name: 'Edouard', id: 4 , color:"#37abc8"},
     { name: 'André', id: 5 , color:"#ffcc00"}
   ];
-})
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
