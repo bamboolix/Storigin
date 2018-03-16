@@ -6,7 +6,7 @@
     </div>
   </ion-header-bar>-->
   <ion-content style="text-align:center">
-    <form ng-submit="doLogin()">
+    <form ng-submit="doLogin()" style='border'>
       <div class="list" style="background-color:#2c3e50!important">
         <img width="300px" height="300px" src="img/owl.svg"/>
         <p style="padding:20px!important;">
@@ -16,15 +16,33 @@
         </p>
 
         <label class="item item-input">
-          <span class="input-label">identifiant</span>
-          <input type="text" ng-model="loginData.username">
+          <input placeholder="identifiant" type="text" ng-model="loginData.username">
         </label>
+
         <label class="item item-input">
-          <span class="input-label">mot de passe</span>
-          <input type="password" ng-model="loginData.password">
+          <input placeholder="mot de passe" type="password" ng-model="loginData.password">
         </label>
-        <label class="item" style="background-color:#2c3e50!important" >
-          <button class="button button-block button-positive" style="border-color:#ffffffbackground-color:#2c3e50!important;color:#ffffff" type="submit">se connecter</button>
+        <span>
+          <p>
+            <a style="color:#ffffff!important;" href="">
+              mot de passe oublié ?
+            </a>
+          </p>
+        </span>
+
+        <label class="item" style="background-color:#2c3e50!important; border-width:0px!important;" >
+          <button class="button button-block button-positive" style="border-color:#ffffff;background-color:#2c3e50!important;color:#ffffff">
+            se connecter
+          </button>
+          <button ng-click="FacebookLogin()" class="button button-block item-end icon-left" style="border-color:#ffffff;background-color:#2c3e50!important;color:#ffffff" type="submit">
+            se connecter avec facebook
+            <i class="icon ion-social-facebook" style=" margin: 5px; color:#ffffff;font-size:2em!important"></i>
+          </button>
+          <button ng-click="FacebookLogin()" class="button button-block item-end icon-left" style="border-color:#ffffff;background-color:#2c3e50!important;color:#ffffff" type="submit">
+           inscription
+          </button>
+          <span style="color:#808080!important;"> storigin S.A.S </span>
+
         </label>
       </div>
     </form>

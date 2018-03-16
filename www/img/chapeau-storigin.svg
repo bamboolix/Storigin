@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="53.806522"
-   height="56.026836"
-   viewBox="0 0 14.236309 14.823768"
+   width="64.161354"
+   height="66.80896"
+   viewBox="0 0 16.976025 17.676538"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
@@ -655,9 +655,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6104353"
-     inkscape:cx="-108.39944"
-     inkscape:cy="-103.53603"
+     inkscape:zoom="2.4417412"
+     inkscape:cx="120.94504"
+     inkscape:cy="-43.608647"
      inkscape:document-units="px"
      inkscape:current-layer="g5657"
      showgrid="false"
@@ -674,37 +674,37 @@
      fit-margin-right="0"
      fit-margin-bottom="0">
     <sodipodi:guide
-       position="611.9029,-548.00331"
+       position="611.90288,-545.15054"
        orientation="1,0"
        id="guide9048"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="609.99248,-544.23231"
+       position="609.99246,-541.37954"
        orientation="1,0"
        id="guide9050"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="224.74473,-1004.8308"
+       position="224.74472,-1001.978"
        orientation="0,1"
        id="guide6880"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="199.90871,-981.39178"
+       position="199.9087,-978.53901"
        orientation="0,1"
        id="guide6882"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1993.0503,-1032.1823"
+       position="1993.0503,-1029.3295"
        orientation="0,1"
        id="guide18777"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1523.4131,-240.5081"
+       position="1523.4131,-237.65533"
        orientation="0,1"
        id="guide8325"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1175.3384,-349.81861"
+       position="1175.3384,-346.96584"
        orientation="0,1"
        id="guide5602"
        inkscape:locked="false" />
@@ -725,7 +725,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-77.012924,-75.823561)">
+     transform="translate(-77.012938,-75.82356)">
     <g
        id="g5737"
        transform="matrix(-1,0,0,1,398.24852,1.4480552e-6)">
@@ -759,8 +759,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path7816"
-         d="m 1611.5213,464.32999 7.8017,1.92574 7.8536,-1.75379 -4.7866,-2.76355 -2.4288,-8.96382 2.4997,-2.07265 1.4892,1.8955 -0.9751,-3.48986 -5.6376,3.57843 -1.0814,9.21185 z"
-         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.53082788;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         d="m 1611.666,467.33946 9.3031,2.29634 9.365,-2.0913 -5.7077,-3.29539 -2.8963,-10.68886 2.9808,-2.47152 1.7757,2.26027 -1.1627,-4.16146 -6.7225,4.26708 -1.2895,10.98463 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.63298351;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
   </g>
 </svg>

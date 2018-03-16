@@ -655,15 +655,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.21582147"
-     inkscape:cx="1368.9325"
-     inkscape:cy="-298.79081"
+     inkscape:zoom="0.6104353"
+     inkscape:cx="275.97415"
+     inkscape:cy="300.81559"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5353"
      showgrid="false"
      showguides="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="977"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
      inkscape:window-x="31"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -712,7 +712,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -752,14 +752,13 @@
        transform="matrix(0.83502035,0,0,0.83502035,-17.787774,-36.770459)"
        style="stroke-width:1.19757569">
       <path
-         transform="rotate(135)"
-         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.55684817;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M -65.150085,-321.92822 H 97.272476 v 194.25738 H -65.150085 Z"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.43509161;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 264.83364,178.51102 158.96563,284.37903 32.347503,157.7609 138.21551,51.892878 Z"
          id="rect7222"
          inkscape:connector-curvature="0" />
       <path
          transform="rotate(135)"
-         style="opacity:1;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:4.67054462;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#aa00d4;fill-opacity:1;fill-rule:nonzero;stroke:#2c3e50;stroke-width:11.26115259;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="M -53.610172,-306.34814 H 81.438702 v 164.49818 H -53.610172 Z"
          id="rect7045"
          inkscape:connector-curvature="0" />

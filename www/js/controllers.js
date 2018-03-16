@@ -33,19 +33,37 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
 
+    $scope.FacebookLogin = function()
+    {
+       CordovaFacebook.login({
+       permissions: ['email', 'user_likes'],
+       onSuccess: function(result)
+       {
+          if(result.declined.length > 0)
+          {
+             alert("The User declined something!");
+          }
+       },
+       onFailure: function(result)
+       {
+          if(result.cancelled)
+          {
+             alert("The user doesn't like my app");
+          }
+          else if(result.error)
+          {
+             alert("There was an error:" + result.errorLocalized);
+          }
+       }
+    });
+
+    }
   // Perform the login action when the user submits the login form
   $scope.doLogin = function()
   {
     console.log('Doing login', $scope.loginData);
     $state.go('app.home');
     $scope.closeLogin();
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-   /* $timeout(function()
-    {
-      $scope.closeLogin();
-    }, 10);*/
   };
 })
 .controller('PlaylistsCtrl', function($scope) {
@@ -58,17 +76,15 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
 })
-.controller('HomeCtrl', function($scope) {
+.controller('HomeCtrl', function($scope)
+{
   $scope.children = [
-    { name: 'Ines', id: 1 },
-    { name: 'Norah', id: 2 },
-    { name: 'Agathe', id: 3 },
-    { name: 'Edouard', id: 4 },
-    { name: 'André', id: 5 },
-    { name: 'Yolé', id: 6 }
+    { name: 'Ines', id: 1, color:"red" },
+    { name: 'Norah', id: 2 , color:"#806600" },
+    { name: 'Agathe', id: 3 ,color:"#9300b8"},
+    { name: 'Edouard', id: 4 , color:"#37abc8"},
+    { name: 'André', id: 5 , color:"#ffcc00"}
   ];
-
-
 })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

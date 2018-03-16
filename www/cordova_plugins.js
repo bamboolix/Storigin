@@ -17,19 +17,27 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-ionic-keyboard.keyboard",
-    "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
-    "pluginId": "cordova-plugin-ionic-keyboard",
-    "clobbers": [
-      "window.Keyboard"
-    ]
-  },
-  {
     "id": "cordova-plugin-fullscreen.AndroidFullScreen",
     "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
     "pluginId": "cordova-plugin-fullscreen",
     "clobbers": [
       "AndroidFullScreen"
+    ]
+  },
+  {
+    "id": "cordova-plugin-facebook.CordovaFacebook",
+    "file": "plugins/cordova-plugin-facebook/www/CordovaFacebook.js",
+    "pluginId": "cordova-plugin-facebook",
+    "clobbers": [
+      "CordovaFacebook"
+    ]
+  },
+  {
+    "id": "cordova-plugin-ionic-keyboard.keyboard",
+    "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
+    "pluginId": "cordova-plugin-ionic-keyboard",
+    "clobbers": [
+      "window.Keyboard"
     ]
   }
 ];
@@ -40,8 +48,9 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.1",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-ionic-webview": "1.1.16",
-  "cordova-plugin-ionic-keyboard": "2.0.5",
-  "cordova-plugin-fullscreen": "1.1.0"
+  "cordova-plugin-fullscreen": "1.1.0",
+  "cordova-plugin-facebook": "0.2.2",
+  "cordova-plugin-ionic-keyboard": "2.0.5"
 };
 // BOTTOM OF METADATA
 });

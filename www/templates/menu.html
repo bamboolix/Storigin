@@ -1,5 +1,29 @@
-<ion-side-menus enable-menu-with-back-views="false">
-  <ion-side-menu-content>
+<ion-side-menus enable-menu-with-back-views="false" style="background-color:#2c3e50!important;">
+
+  <style>
+    .bar.bar-stable
+    {
+      border-color: #b2b2b2;
+      background-color: #2c3e50;
+      color: #ffffff;
+    }
+    .item .item-content
+    {
+      border-color: #b2b2b2;
+      background-color: #2c3e50;
+      color: #ffffff;
+    }
+    .bar.bar-stable .title
+    {
+      color:#ffffff;
+    }
+
+    ion-item
+    {
+      background-color:#000000!important;
+    }
+  </style>
+  <ion-side-menu-content style="background-color:#2c3e50!important;">
 
     <ion-nav-bar class="bar-stable">
 
@@ -7,14 +31,22 @@
       </ion-nav-back-button>
 
       <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        <button class="button button-icon button-clear ion-navicon" style="color:#ffffff;" menu-toggle="left">
         </button>
       </ion-nav-buttons>
 
       <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-person" menu-toggle="right">
+        <button class="button button-icon button-clear ion-help-buoy" style="color:#ffffff;" menu-toggle="right">
+        </button>
+        <button class="button button-icon button-clear ion-person" style="color:#ffffff;" menu-toggle="right">
+        </button>
+        <span class="badge badge-assertive">
+          0
+        </span>
+        <button class="button button-icon button-clear ion-person-add" style="color:#ffffff;" menu-toggle="right">
         </button>
       </ion-nav-buttons>
+
 
     </ion-nav-bar>
 
@@ -23,30 +55,37 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <!--<h1 class="title">Left</h1>-->
+    <ion-header-bar class="bar-stable" style="text-align:center!important">
+      <h1 class="title">mes services</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content style="background-color:#000000!important;">
       <ion-list>
         <ion-item menu-close href="#/app/home">
-          Storigin
+          Academy
         </ion-item>
+
         <ion-item menu-close href="#/app/search">
-          Actus
+          Parents
         </ion-item>
-        <ion-item menu-close ng-click="login()">
+
+        <ion-item menu-close href="#/app/search">
+          News
+        </ion-item>
+
+        <ion-item menu-close href="#" ng-click="login()">
           Déconnexion
         </ion-item>
+
       </ion-list>
     </ion-content>
   </ion-side-menu>
 
 
   <ion-side-menu side="right">
-    <ion-header-bar class="bar-stable">
+    <ion-header-bar class="bar-stable" style="text-align:center">
       <h1 class="title">Ajouter</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content style="background-color:#000000!important;">
       <div class="list">
         <label class="item item-input">
           <input type="text" placeholder="Nom">
@@ -63,7 +102,7 @@
           <i class="icon ion-record ColorChoise energized" ></i>
         </label>
         <label class="item item-input">
-          <button class="button button-full button-positive">
+          <button class="button button-outline button-positive">
             Ajouter
           </button>
         </label>
