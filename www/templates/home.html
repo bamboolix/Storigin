@@ -1,4 +1,4 @@
-<ion-view view-title="Enfants" style="background-color:#2c3e50!important;">
+<ion-view view-title="Enfants" style="background-color:#34495e!important;text-align:center!important;">
     <style>
         .item .item-content
         {
@@ -10,16 +10,17 @@
         #myProgress {
             width: 100%;
             background-color: #2c3e50!;
-            border-color:#ffffff;
+            border-color:#34495e;
             border-style: solid;
             border-width: 2px;
             padding:2px;
+            margin:3px;
         }
 
         #myBar {
             width: 10%;
             height: 10px;
-            background-color: #ffffff;
+            background-color: red;
         }
     </style>
     <ion-content>
@@ -38,7 +39,6 @@
                             <span style="color:#ffffff;font-size:1.5em">
                                 {{child.name}}
                             </span>
-                            <!--<h2>Math</h2>-->
                             <div id="myProgress">
                                 <div id="myBar"></div>
                             </div>
@@ -47,19 +47,22 @@
                             </div>
                             <span style="color:#ffffff;font-size:0.5em">
                                Niveau :
-                                <i class="icon ion-android-star energized"></i>
-                                <i class="icon ion-android-star energized"></i>
-                                <i class="icon ion-android-star energized"></i>
-                                <i class="icon ion-android-star energized"></i>
-
+                                <i class="icon ion-android-star energized" style="font-size:2em!important;"></i>
+                                <i class="icon ion-android-star energized" style="font-size:2em!important;"></i>
+                                <i class="icon ion-android-star energized" style="font-size:2em!important;"></i>
+                                <i class="icon ion-android-star" style="font-size:2em!important;color:#34495e;"></i>
+                                <br/>
+                               Vie :
+                                <i class="icon ion-heart" style="font-size:2em!important;color:red;"></i>
+                                <i class="icon ion-heart" style="font-size:2em!important;color:red;"></i>
+                                <i class="icon ion-heart" style="font-size:2em!important;color:#34495e;"></i>
+                                <i class="icon ion-heart " style="font-size:2em!important;color:#34495e;"></i>
                             </span>
                         </p>
                     </div>
 
                     <div class = "col">
-                      <!--<span style="color:#ffffff;font-size:1.5em">
-                        <p>Niveau : </p>
-                      </span>-->
+                        <i class="icon ion-heart energized animated infinite bounce" style="color:red;font-size:3em!important;"></i>
                     </div>
                 </div>
 

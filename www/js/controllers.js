@@ -1,16 +1,51 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state ) {
-
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $http ) {
 
   // Form data for the login modal
-  $scope.loginData = {};
+  $scope.loginData = { "action" : "authenticate" };
+  $scope.registerData = { "action" : "register" };
+
+
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/register.html',
+  {
+    scope: $scope
+  }).then(function(modal)
+  {
+    $scope.modalregister = modal;
+  });
+
+
+  // Triggered in the login modal to close it
+  $scope.closeRegister = function()
+  {
+    $scope.modalregister.hide();
+  };
+
+  // Open the login modal
+  $scope.openRegister = function()
+  {
+    $scope.modalregister.show();
+  };
+
+/**
+   * Function doLogin()
+   * Gestion de la connexion
+   * @author David Namboka
+   * @param {void} Aucun paramètre
+   */
+
+  $scope.doRegister = function()
+  {
+        $http.post("https://storigin.fr/storiginapi/", $scope.registerData , { headers: {'Content-Type': 'application/json'} } )
+        .then(function ( response )
+        {
+             console.log( response.data );
+        });
+
+  };
+
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html',
@@ -23,7 +58,8 @@ angular.module('starter.controllers', [])
   });
 
   // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
+  $scope.closeLogin = function()
+  {
     $scope.modal.hide();
   };
 
@@ -33,17 +69,19 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
 
-    $scope.FacebookLogin = function()
-    {
-       CordovaFacebook.login({
-       permissions: ['email', 'user_likes'],
+  $scope.FacebookLogin = function()
+  {
+      CordovaFacebook.login
+      ({
+       permissions: [ 'email', 'user_likes' ],
        onSuccess: function(result)
        {
           if(result.declined.length > 0)
           {
              alert("The User declined something!");
           }
-       },
+       }
+       ,
        onFailure: function(result)
        {
           if(result.cancelled)
@@ -56,23 +94,43 @@ angular.module('starter.controllers', [])
           }
        }
     });
+  }
 
-    }
   // Perform the login action when the user submits the login form
+
+/**
+   * Function doLogin()
+   * Gestion de la connexion
+   * @author David Namboka
+   * @param {void} Aucun paramètre
+   */
+
   $scope.doLogin = function()
   {
-    console.log('Doing login', $scope.loginData);
-    $state.go('app.home');
-    $scope.closeLogin();
+        $http.post("https://storigin.fr/storiginapi/", $scope.loginData , { headers: {'Content-Type': 'application/json'} } )
+        .then(function ( response )
+        {
+               if ( response.data.status == 200 )
+               {
+                     $state.go( 'app.home' );
+                     $scope.closeLogin();
+               }
+               else if ( response.data.status == 400 )
+               {
+                    console.log( 'erreur de connexion ');
+               }
+        });
+
   };
+
+
 })
-.controller('HomeCtrl', function($scope)
+.controller('HomeCtrl', function($scope , $http )
 {
-  $scope.children = [
-    { name: 'Ines', id: 1, color:"red" },
-    { name: 'Norah', id: 2 , color:"#806600" },
-    { name: 'Agathe', id: 3 ,color:"#9300b8"},
-    { name: 'Edouard', id: 4 , color:"#37abc8"},
-    { name: 'André', id: 5 , color:"#ffcc00"}
-  ];
+    $http.post("https://storigin.fr/storiginapi/", $scope.loginData , { headers: {'Content-Type': 'application/json'} } )
+    .then(function ( response )
+    {
+         $scope.children = response.data;
+    });
+
 });
