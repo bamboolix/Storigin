@@ -20,8 +20,40 @@
 
     ion-item
     {
-      background-color:#000000!important;
+      background-color:#34495e!important;
     }
+
+    .popup-container .popup {
+    width: 350px;
+    max-height: 90%;
+    padding: 0px;
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #34495e!important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align:center;
+}
+
+.popup-head {
+    padding: 15px 10px;
+    border-bottom: 0px solid #eee;
+    text-align: center;
+}
+
+
   </style>
   <ion-side-menu-content style="background-color:#2c3e50!important;">
 
@@ -36,7 +68,7 @@
       </ion-nav-buttons>
 
       <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-help-buoy" style="color:#ffffff;" menu-toggle="right">
+        <button class="button button-icon button-clear ion-help-buoy"  ng-click="openInformation()" style="color:#ffffff;">
         </button>
         <button class="button button-icon button-clear ion-person" style="color:#ffffff;" menu-toggle="right">
         </button>
@@ -56,12 +88,12 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable" style="text-align:center!important">
-      <h1 class="title">mes services</h1>
+     <!-- <h1 class="title">mes services</h1>-->
     </ion-header-bar>
-    <ion-content style="background-color:#000000!important;">
+    <ion-content style="background-color:#34495e!important;">
       <ion-list>
 
-        <ion-item menu-close href="#/app/home">
+        <ion-item menu-close href="#/app/home" style="border-width:0px!important;">
           Academy
         </ion-item>
 
@@ -80,33 +112,68 @@
       </ion-list>
     </ion-content>
   </ion-side-menu>
-
-
-  <ion-side-menu side="right">
-    <ion-header-bar class="bar-stable" style="text-align:center">
-      <h1 class="title">Ajouter</h1>
+  <ion-side-menu side="right" style="text-align:center!important">
+    <ion-header-bar class="bar-stable" style="text-align:center!important">
+      <h1 class="title">Ajouter un enfant</h1>
     </ion-header-bar>
-    <ion-content style="background-color:#000000!important;">
+
+    <ion-content style="background-color:#34495e!important;">
       <div class="list">
-        <label class="item item-input">
-          <input type="text" placeholder="Nom">
+        <form ng-submit="createChild()" style='border'>
+
+        <label class="item item-input" style="margin:0px!important;padding:0px!important;">
+          <input type="text" placeholder="Nom" ng-model="createChildData.nom">
         </label>
-        <label class="item item-input">
-          <input type="text" placeholder="Date de naissance">
+
+       <!-- <label class="item item-input" style="margin-top:10px!important;margin-bottom:10px!important;padding:0px!important;">
+          <input id="timestart" placeholder="Date de naissance" value="00:00:00" type="time">
         </label>
-        <label class="item item-input"> Couleur :
-          <i class="icon ion-record ColorChoise assertive"></i>
-          <i class="icon ion-record ColorChoise positive" ></i>
-          <i class="icon ion-record ColorChoise calm" ></i>
-          <i class="icon ion-record ColorChoise energized" ></i>
-          <i class="icon ion-record ColorChoise energized" ></i>
-          <i class="icon ion-record ColorChoise energized" ></i>
+
+        <label class="item item-input" style="margin-top:10px!important;margin-bottom:10px!important;padding:0px!important;">
+          <input id="timefinish" placeholder="Date de naissance" value="00:00:00" type="time">
         </label>
+      -->
+        <label class="item item-input" style="margin-top:10px!important;margin-bottom:10px!important;padding:0px!important;color:#e74c3c">
+          date de naissance : <input id="birthdate" placeholder="Date de naissance" ng-change="setBirthdate()" value="0000-00-0" ng-model="createChildData.birthdate" type="date">
+        </label>
+
+          <div class="button-bar" style="margin-top:10px!important;margin-bottom:0px!important;padding:0px!important;">
+            <a class="button assertive" style="background-color:#fad390!important" ng-click="setChildColor('#fad390')">&nbsp;</a>
+            <a class="button positive" style="background-color:#f8c291!important" ng-click="setChildColor('#f8c291')">&nbsp;</a>
+            <a class="button calm" style="background-color:#6a89cc!important" ng-click="setChildColor('#6a89cc')">&nbsp;</a>
+            <a class="button energized" style="background-color:#82ccdd!important" ng-click="setChildColor('#82ccdd')">&nbsp;</a>
+            <a class="button energized" style="background-color:#b8e994!important" ng-click="setChildColor('#b8e994')">&nbsp;</a>
+          </div>
+          <div class="button-bar" style="margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;">
+            <a class="button assertive" style="background-color:#f6b93b!important" ng-click="setChildColor('#f6b93b')">&nbsp;</a>
+            <a class="button positive" style="background-color:#e55039!important" ng-click="setChildColor('#e55039')">&nbsp;</a>
+            <a class="button calm" style="background-color:#4a69bd!important" ng-click="setChildColor('#4a69bd')">&nbsp;</a>
+            <a class="button energized" style="background-color:#60a3bc!important" ng-click="setChildColor('#60a3bc')">&nbsp;</a>
+            <a class="button energized" style="background-color:#78e08f!important" ng-click="setChildColor('#78e08f')">&nbsp;</a>
+          </div>
+          <div class="button-bar" style="margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;">
+            <a class="button assertive" style="background-color:#fa983a!important" ng-click="setChildColor('#fa983a')">&nbsp;</a>
+            <a class="button positive" style="background-color:#eb2f06!important" ng-click="setChildColor('#eb2f06')">&nbsp;</a>
+            <a class="button calm" style="background-color:#1e3799!important" ng-click="setChildColor('#1e3799')">&nbsp;</a>
+            <a class="button energized" style="background-color:#3c6382!important" ng-click="setChildColor('#3c6382')">&nbsp;</a>
+            <a class="button energized" style="background-color:#38ada9!important" ng-click="setChildColor('#38ada9')">&nbsp;</a>
+          </div>
+          <div class="button-bar" style="margin-top:0px!important;margin-bottom:0px!important;padding:0px!important;">
+            <a class="button assertive" style="background-color:#e58e26!important" ng-click="setChildColor('#e58e26')">&nbsp;</a>
+            <a class="button positive" style="background-color:#b71540!important" ng-click="setChildColor('#b71540')">&nbsp;</a>
+            <a class="button calm" style="background-color:#0c2461!important" ng-click="setChildColor('#0c2461')">&nbsp;</a>
+            <a class="button energized" style="background-color:#0a3d62!important" ng-click="setChildColor('#0a3d62')">&nbsp;</a>
+            <a class="button energized" style="background-color:#38ada9!important" ng-click="setChildColor('#079992')">&nbsp;</a>
+          </div>
+          <div id="childcolor">
+           <img width="200px" height="200px" style="margin-top:10px!important;margin-bottom:10px!important;" src="img/chapeau-register.svg"/>
+         </div>
         <label class="item item-input">
-          <button class="button button-outline button-positive">
+          <button class="button button-full button-outline" style="border-color:none!important; color:#ffffff">
             Ajouter
           </button>
         </label>
+        </form>
       </div>
     </ion-content>
   </ion-side-menu>

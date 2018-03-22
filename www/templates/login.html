@@ -6,9 +6,9 @@
     </div>
   </ion-header-bar>-->
   <ion-content style="text-align:center" name="loginform">
-    <form ng-submit="doLogin()" style='border'>
+    <form ng-submit="doLogin()" style='border' novalidate>
       <div class="list" style="background-color:#34495e!important">
-        <img width="300px" height="300px" src="img/owl.svg"/>
+        <img width="300px" height="300px" src="img/solo.svg"/>
         <p style="padding:20px!important;">
           <span class="LoginTitle">
             Storigin Academy
@@ -16,11 +16,11 @@
         </p>
 
         <label class="item item-input">
-          <input placeholder="email" name="email" type="text" ng-model="loginData.email">
+          <input placeholder="email" name="email" type="text" ng-model="loginData.email" ng-required="true"  class="form-control">
         </label>
 
         <label class="item item-input">
-          <input placeholder="mot de passe" name="password" type="password" ng-model="loginData.password" required>
+          <input placeholder="mot de passe" name="password" type="password" ng-required="true" ng-model="loginData.password" required>
         </label>
         <span>
           <p>
@@ -29,23 +29,20 @@
             </a>
           </p>
         </span>
-        <span ng-show="loginform.password.$touched && loginform.password.$invalid">The name is required.</span>
 
         <label class="item" style="background-color:#34495e!important; border-width:0px!important;" >
 
           <button class="button button-block button-positive" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff">
             se connecter
           </button>
-
-          <button ng-click="FacebookLogin()" class="button button-block item-end icon-left" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff" type="submit">
-            se connecter avec facebook
-            <i class="icon ion-social-facebook" style=" margin: 5px; color:#ffffff;font-size:2em!important"></i>
-          </button>
-
-
         </label>
       </div>
     </form>
+
+    <button ng-click="FacebookLogin()" class="button button-block item-end icon-left" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff" type="submit">
+      se connecter avec facebook
+      <i class="icon ion-social-facebook" style=" margin: 5px; color:#ffffff;font-size:2em!important"></i>
+    </button>
 
     <button ng-click="openRegister()" class="button button-block item-end icon-left" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff">
       inscription

@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="owl.svg">
+   sodipodi:docname="solo.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -717,7 +717,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -757,7 +757,7 @@
        transform="matrix(0.83109708,0,0,0.83109708,-1261.6929,-297.08303)"
        style="stroke-width:1.20322895">
       <circle
-         style="fill:#34495e;fill-opacity:1;stroke:#2c3e50;stroke-width:1.62870054;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#34495e;fill-opacity:1;stroke:#ffffff;stroke-width:0.48248142;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path939"
          cx="1651.0258"
          cy="524.85443"
@@ -766,12 +766,7 @@
          inkscape:connector-curvature="0"
          id="path7816"
          d="m 1608.5247,553.1409 41.7755,10.31169 42.0535,-9.39097 -25.631,-14.79784 -13.0051,-47.99812 13.3848,-11.09833 7.9742,10.14973 -5.2213,-18.68695 -30.1874,19.16123 -5.7905,49.32625 z"
-         style="fill:#2c3e50;fill-rule:evenodd;stroke:none;stroke-width:0.5189175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0.94117647" />
-      <path
-         style="fill:#2c3e50;fill-rule:evenodd;stroke:none;stroke-width:0.5189175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0.94117647"
-         d="m 1608.5247,553.1409 41.7755,10.31169 42.0535,-9.39097 -25.631,-14.79784 -13.0051,-47.99812 13.3848,-11.09833 7.9742,10.14973 -5.2213,-18.68695 -30.1874,19.16123 -5.7905,49.32625 z"
-         id="path1167"
-         inkscape:connector-curvature="0" />
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.5189175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
   </g>
 </svg>

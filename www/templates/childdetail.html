@@ -1,0 +1,88 @@
+<ion-view view-title="{{ child.name }}Bob" style="background-color:#34495e!important;text-align:center!important;">
+
+  <style>
+          .item .item-content
+        {
+             background-color: transparent !important;
+             color:#ffffff;
+             font-size:2em;
+             border-width: 0px!important;
+             border-style: none!important;
+        }
+
+            #myProgress {
+            width: 100%;
+            background-color: #2c3e50!;
+            border-color:#ffffff;
+            border-style: solid;
+            border-width: 2px;
+            padding:2px;
+        }
+
+        #myBar {
+            width: 10%;
+            height: 20px;
+            background-color: #78e08f;
+        }
+  </style>
+
+
+  <ion-item style="border-width:0px!important;margin-top:50px!important;">
+    <div class = "row" style="border-width:0px!important;padding:10px!important;">
+      <div class = "col" style="text-align:center;background-color:#78e08f">
+        <ion-thumbnail item-end >
+          <span>
+
+          </span>
+          <img src="img/chapeau-register.svg" style="padding:0px!important;width:200px;height:200px; margin:20px!important;">
+        </ion-thumbnail>
+      </div>
+    </div>
+  </ion-item>
+
+
+    <div class="button-bar" style="border-width:0px!important">
+        <button ng-class="{'button icon ion-play': active, 'button icon ion-pause': !active}" ng-click="active=!active" style="background-color:#f6b93b;color:#ffffff;font-size:3em!important"> </button>
+        <button class="button icon ion-android-stopwatch" style="background-color:#e55039;color:#ffffff;font-size:3em!important"></button>
+        <button class="button icon ion-ios-color-wand" style="background-color:#4a69bd;color:#ffffff;font-size:3em!important"></button>
+        <button class="button icon ion-compose" style="background-color:#60a3bc;color:#ffffff;font-size:3em!important"></button>
+    </div>
+
+  <ion-item style="background-color:#2c3e50!important; border-width:0px!important;margin-top:10px!important;">
+
+  <div class = "col">
+      <!--<h2>Math</h2>-->
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+      <br/>
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+      <br/>
+    <span style="color:#ffffff;font-size:3em">
+       Niveau :
+        <i class="icon ion-android-star energized"></i>
+        <i class="icon ion-android-star energized"></i>
+        <i class="icon ion-android-star energized" style="color:#34495e;"></i>
+        <i class="icon ion-android-star energized" style="color:#34495e;"></i>
+    </span>
+<br/>
+    <span style="color:#ffffff;font-size:3em">
+       Niveau :
+        <i class="icon ion-heart assertive"></i>
+        <i class="icon ion-heart assertive"></i>
+        <i class="icon ion-heart assertive"></i>
+        <i class="icon ion-heart energized" style="color:#34495e;"></i>
+    </span>
+
+      <span style="color:#ffffff;font-size:3em">
+       Horaire : 00:00
+    </span>
+
+
+  </div>
+  </ion-item>
+
+</ion-view>
+

@@ -67,7 +67,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'HomeCtrl'
         }
       }
+    })
+    .state('app.childdetail', {
+      url: '/childdetail',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/childdetail.html',
+          controller: 'ChildDetailCtrl'
+        }
+      }
     });
+
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/childdetail');
 });
