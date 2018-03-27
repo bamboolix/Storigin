@@ -1,11 +1,6 @@
-<ion-modal-view style="background-color:#34495e!important">
-  <!-- <ion-header-bar style="background-color:#2c3e50!important;">
-     <h1 class="title" style="color:#ffffff!important;text-align:center">Connexion</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>-->
-  <ion-content style="text-align:center" name="loginform">
+<ion-view scroll="false" hide-nav-bar="true" style="background-color:#34495e!important">
+
+<ion-content style="text-align:center" name="loginform" style="background-color:#34495e!important">
     <form ng-submit="doLogin()" style='border' novalidate>
       <div class="list" style="background-color:#34495e!important">
         <img width="300px" height="300px" src="img/solo.svg"/>
@@ -22,6 +17,7 @@
         <label class="item item-input">
           <input placeholder="mot de passe" name="password" type="password" ng-required="true" ng-model="loginData.password" required>
         </label>
+          <br/>
         <span>
           <p>
             <a style="color:#ffffff!important;" href="">
@@ -31,8 +27,7 @@
         </span>
 
         <label class="item" style="background-color:#34495e!important; border-width:0px!important;" >
-
-          <button class="button button-block button-positive" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff">
+          <button class="button button-block button-positive" style="background-color:#d4ff2a!important;color:#000000">
             se connecter
           </button>
         </label>
@@ -52,4 +47,4 @@
             Storigin - 2018
           </span>
   </ion-content>
-</ion-modal-view>
+</ion-view>

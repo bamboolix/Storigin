@@ -1,0 +1,39 @@
+<ion-view scroll="false" style="background-color:#34495e!important">
+<ion-content style="text-align:center" name="inviteform">
+        <form ng-submit="InviteParents()" style='border' novalidate>
+            <div class="list" style="background-color:#34495e!important">
+                <img width="300px" height="300px" src="img/invite.svg" class="animated pulse infinite" />
+                <p style="padding:20px!important;">
+                  <span style="color:#d4ff2a;font-size:3em">
+                    <i class="ion-heart" style="color:#d4ff2a!important;"></i>
+                      ️ Invitation
+                    <i class="ion-heart" style="color:#d4ff2a!important;"></i>
+                  </span>
+                </p>
+                <p style="padding:5px!important;">
+                  <span style="color:#ffffff;font-size:2em">
+                    Plus on est de fou plus on rit !
+                  </span>
+                </p>
+                <p style="padding:5px!important;">
+                  <span style="color:#ffffff;font-size:15px">
+                    Inviter les parents des amis de vos enfants !
+                  </span>
+                </p>
+                <label class="item item-input">
+                    <input placeholder="adresse email d'invitation" name="invitationemail" type="text" ng-model="InviteData.email">
+                </label>
+                <label class="item" style="background-color:#34495e!important; border-width:0px!important;" >
+                    <button class="button button-block button-positive" style="background-color:#d4ff2a!important;color:#000000">
+                        inviter
+                    </button>
+                </label>
+            </div>
+        </form>
+        <div class="button-bar button-positive">
+            <a class="button"  disabled style="background-color:#d4ff2a!important;color:#000000">invités</a>
+            <a class="button"  disabled style="background-color:#d4ff2a!important;color:#000000">amis</a>
+            <a class="button"  disabled style="background-color:#d4ff2a!important;color:#000000">invitations</a>
+        </div>
+    </ion-content>
+</ion-view>

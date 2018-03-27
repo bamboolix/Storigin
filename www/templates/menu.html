@@ -1,5 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false" style="background-color:#2c3e50!important;">
-
+<ion-side-menus enable-menu-with-back-views="true" style="background-color:#2c3e50!important;">
   <style>
     .bar.bar-stable
     {
@@ -55,11 +54,12 @@
 
 
   </style>
+
   <ion-side-menu-content style="background-color:#2c3e50!important;">
 
     <ion-nav-bar class="bar-stable">
 
-      <ion-nav-back-button>
+      <ion-nav-back-button style="color:#ffffff;">
       </ion-nav-back-button>
 
       <ion-nav-buttons side="left">
@@ -68,13 +68,11 @@
       </ion-nav-buttons>
 
       <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-help-buoy"  ng-click="openInformation()" style="color:#ffffff;">
-        </button>
-        <button class="button button-icon button-clear ion-person" style="color:#ffffff;" menu-toggle="right">
-        </button>
-        <span class="badge badge-assertive">
+
+        <span class="badge badge-assertive" ng-click="openInformation()">
           0
         </span>
+
         <button class="button button-icon button-clear ion-person-add" style="color:#ffffff;" menu-toggle="right">
         </button>
       </ion-nav-buttons>
@@ -82,7 +80,8 @@
 
     </ion-nav-bar>
 
-    <ion-nav-view name="menuContent"></ion-nav-view>
+    <ion-nav-view name="menuContent">
+    </ion-nav-view>
 
   </ion-side-menu-content>
 
@@ -97,13 +96,13 @@
           Academy
         </ion-item>
 
-        <ion-item menu-close href="#/app/search">
+        <ion-item menu-close href="#/app/parents">
           Parents
         </ion-item>
 
-        <ion-item menu-close href="#/app/search">
+      <!--  <ion-item menu-close href="#/app/news">
           News
-        </ion-item>
+        </ion-item>-->
 
         <ion-item menu-close href="#" ng-click="login()">
           Déconnexion
@@ -112,9 +111,14 @@
       </ion-list>
     </ion-content>
   </ion-side-menu>
+
+
   <ion-side-menu side="right" style="text-align:center!important">
+
     <ion-header-bar class="bar-stable" style="text-align:center!important">
-      <h1 class="title">Ajouter un enfant</h1>
+      <h1 class="title">
+        Ajouter un enfant
+      </h1>
     </ion-header-bar>
 
     <ion-content style="background-color:#34495e!important;">
@@ -177,4 +181,6 @@
       </div>
     </ion-content>
   </ion-side-menu>
+
+
 </ion-side-menus>

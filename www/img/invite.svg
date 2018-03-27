@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="solo.svg">
+   sodipodi:docname="invite.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -655,9 +655,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2208706"
-     inkscape:cx="413.66168"
-     inkscape:cy="82.372938"
+     inkscape:zoom="0.6104353"
+     inkscape:cx="-327.64571"
+     inkscape:cy="370.84628"
      inkscape:document-units="px"
      inkscape:current-layer="g5657"
      showgrid="false"
@@ -756,26 +756,6 @@
        id="g5657"
        transform="matrix(0.83109708,0,0,0.83109708,-1261.6929,-297.08303)"
        style="stroke-width:1.20322895">
-      <path
-         style="fill:#ccff00;stroke:none;stroke-width:0.31835431px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 1588.1826,606.6016 h -34.4203 l 11.6038,-11.60383 -9.9089,-9.90888 h 32.4646 z"
-         id="path952"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path954"
-         d="m 1714.2133,606.6016 h 34.4203 l -11.6038,-11.60383 9.9089,-9.90888 h -32.4646 z"
-         style="fill:#ccff00;stroke:none;stroke-width:0.31835431px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path950"
-         d="m 1729.9045,597.7503 -15.2454,8.8513 v -12.51649 z"
-         style="fill:#445016;stroke:#000000;stroke-width:0.31835431px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         style="fill:#445016;stroke:#000000;stroke-width:0.31835431px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 1572.9372,597.7503 15.2454,8.8513 v -12.51649 z"
-         id="path948"
-         inkscape:connector-curvature="0" />
       <circle
          style="fill:#34495e;fill-opacity:1;stroke:#ffffff;stroke-width:0.48248142;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path939"
@@ -786,25 +766,7 @@
          inkscape:connector-curvature="0"
          id="path7816"
          d="m 1608.5247,553.1409 41.7755,10.31169 42.0535,-9.39097 -25.631,-14.79784 -13.0051,-47.99812 13.3848,-11.09833 7.9742,10.14973 -5.2213,-18.68695 -30.1874,19.16123 -5.7905,49.32625 z"
-         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.5189175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#d4ff2a;fill-opacity:1;stroke:#000000;stroke-width:0.8426789;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
-         id="rect938"
-         width="157.91621"
-         height="28.31846"
-         x="1572.9373"
-         y="569.43182" />
-      <text
-         id="text958"
-         y="588.97595"
-         x="1603.062"
-         style="font-style:normal;font-weight:normal;font-size:12.73417187px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.38305312"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#000000;stroke-width:0.38305312"
-           y="588.97595"
-           x="1603.062"
-           id="tspan956"
-           sodipodi:role="line">Bêta privée 0.1</tspan></text>
+         style="fill:#d4ff2a;fill-rule:evenodd;stroke:none;stroke-width:0.5189175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
     </g>
   </g>
 </svg>
