@@ -2,20 +2,43 @@
 angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', function($scope, $ionicPopup, $stateParams , $http, $rootScope )
 {
 
+
+  var PlayTimer = new Timer();
+
+  PlayTimer.start();
+  PlayTimer.addEventListener('secondsUpdated', function ( e )
+  {
+        $('#PlayeTimer').html(PlayTimer.getTimeValues().toString());
+  });
+
   $scope.calendarData = { "action" : "childCalendar" };
   $scope.ChildData = { "action" : "getChildDetails" };
-
+  $scope.GetChildCalendar = { "action" : "GetChildCalendar" };
+  $scope.GetChildCalendar.childid = parseInt($stateParams.detailedchildid);
   $scope.ChildData.parentid = $rootScope.parentid;
 
   $scope.childid = $stateParams.detailedchildid;
   $scope.color = $stateParams.detailedchildcolor;
   $scope.pseudo = $stateParams.detailedchildpseudo;
   $scope.age = $stateParams.detailedchildage;
+  $scope.conseils = "X h / jour";
+  $scope.attention = "l'identité numérique";
 
-  console.log( $stateParams );
+/*  $scope.calendarData.monday = true;
+  $scope.calendarData.tuesday = true;
+*/
 
-  //$http.get();
-
+  $http.post("https://storigin.fr/storiginapi/",  $scope.GetChildCalendar , { headers: {'Content-Type': 'application/json'} } )
+  .then(function ( response )
+  {
+       $scope.calendarData.monday = Boolean(response.data.result[0].lundi);
+       $scope.calendarData.tuesday = Boolean(response.data.result[0].mardi);
+       $scope.calendarData.wednesday = Boolean(response.data.result[0].mercredi);
+       $scope.calendarData.thursday = Boolean(response.data.result[0].jeudi);
+       $scope.calendarData.friday = Boolean(response.data.result[0].vendredi);
+       $scope.calendarData.saturday = Boolean(response.data.result[0].samedi);
+       $scope.calendarData.sunday = Boolean(response.data.result[0].dimanche);
+  });
 /**
    * Function openPopup()
    * Ouverture de la fenêtre popup générique

@@ -1,4 +1,4 @@
-<ion-view view-title="{{ pseudo }}" style="background-color:#34495e!important;text-align:center!important;">
+<ion-view view-title="Fiche détaillée de {{ pseudo }}" style="background-color:#34495e!important;text-align:center!important;">
 
   <style>
           .item .item-content
@@ -26,16 +26,20 @@
         }
   </style>
 
-
+    <ion-item style="border-width:0px!important;margin-top:50px!important;">
+        <br/>
+        <span style="color:#ffffff;font-size:3em;padding:10px;">
+             <span style="color:#d4ff2a;font-size:1.5em!important;">{{ pseudo }}</span>
+          </span>
+    </ion-item>
   <ion-item style="border-width:0px!important;margin-top:50px!important;">
     <div class = "row" style="border-width:0px!important;padding:10px!important;">
-      <div class = "col" style="text-align:center;background-color:{{ color }}">
-        <ion-thumbnail item-end >
-          <span>
-
-          </span>
-          <img src="img/chapeau-register.svg" style="padding:0px!important;width:200px!important;height:200px!important; margin:20px!important;">
-        </ion-thumbnail>
+      <div class = "col" style="text-align:center;">
+          <div style="text-align:center;background-color:{{ color }}; border-radius:50%!important; width:250px!important;box-shadow: 20px 20px #668000;">
+              <ion-thumbnail item-end>
+                 <img src="img/chapeau-register.svg" style="padding:0px!important;width:200px!important;height:200px!important; margin:20px!important;">
+              </ion-thumbnail>
+          </div>
       </div>
     </div>
   </ion-item>
@@ -51,8 +55,26 @@
   <ion-item style="background-color:#2c3e50!important; border-width:0px!important;margin-top:10px!important;">
 
   <div class = "col" style="text-align:left!important;">
-      <!--<h2>Math</h2>-->
-    <div id="myProgress">
+
+    <div style="width:100%;padding:10px!important;text-align:center">
+        <img src="img/3-6-9-12.svg" />
+    </div>
+      <br/>
+      <br/>
+      <span style="color:#ffffff;font-size:3em;padding:10px;">
+       Ecrans : <span style="font-size:1em;color:#d4ff2a;">{{ conseils }}</span>
+      </span>
+      <br/>
+      <br/>
+      <br/>
+
+      <span style="color:#ffffff;font-size:3em;padding:10px;">
+       Attention : <span style="font-size:1em;color:#d4ff2a;">{{ attention }}</span>
+      </span>
+      <br/>
+      <br/>
+
+      <div id="myProgress">
       <div id="myBar"></div>
     </div>
       <br/>
@@ -60,7 +82,15 @@
       <div id="myBar"></div>
     </div>
       <br/>
-    <span style="color:#ffffff;font-size:3em;padding:10px;">
+      <br/>
+      <br/>
+      <span style="color:#ffffff;font-size:3em;padding:10px;">
+          Age : <span style="color:#d4ff2a;">{{ age }}</span>
+      </span>
+      <br/>
+      <br/>
+      <br/>
+      <span style="color:#ffffff;font-size:3em;padding:10px;">
        Niveau :
         <i class="icon ion-android-star" style="color:#d4ff2a!important;"></i>
         <i class="icon ion-android-star" style="color:#d4ff2a!important;"></i>
@@ -71,7 +101,7 @@
 <br/>
 
       <span style="color:#ffffff;font-size:3em;padding:10px;">
-       Niveau :
+       Vies :
         <i class="icon ion-heart" style="color:#d4ff2a!important;"></i>
         <i class="icon ion-heart" style="color:#d4ff2a!important;"></i>
         <i class="icon ion-heart" style="color:#d4ff2a!important;"></i>
@@ -82,15 +112,12 @@
 <br/>
 
       <span style="color:#ffffff;font-size:3em;padding:10px;">
-       Horaire : <span style="color:#d4ff2a;">00:00</span>
+       Durée : <span id="PlayeTimer" style="color:#d4ff2a;"></span>
     </span>
 <br/>
 <br/>
 <br/>
 
-      <span style="color:#ffffff;font-size:3em;padding:10px;">
-          Age : <span style="color:#d4ff2a;">{{ age }}</span>
-    </span>
   </div>
   </ion-item>
 

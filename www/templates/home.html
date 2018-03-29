@@ -23,6 +23,18 @@
             height: 10px;
             background-color: #d4ff2a;
         }
+
+        .inactive-item
+        {
+            font-size:2em!important;
+            color:#34495e!important;
+        }
+
+        .active-item
+        {
+            font-size:2em!important;
+            color:#d4ff2a!important;
+        }
     </style>
     <ion-content>
         <ion-list>
@@ -47,22 +59,16 @@
                                 </div>
                                 <span style="color:#ffffff;font-size:0.5em">
                                    Niveau :
-                                    <i class="icon ion-android-star" style="font-size:2em!important;color:#d4ff2a!important;"></i>
-                                    <i class="icon ion-android-star" style="font-size:2em!important;color:#d4ff2a!important;"></i>
-                                    <i class="icon ion-android-star" style="font-size:2em!important;color:#d4ff2a!important;"></i>
-                                    <i class="icon ion-android-star" style="font-size:2em!important;color:#34495e;"></i>
+                                           <i ng-repeat="star in child.stars" ng-class="GetStarsLevel('{{ star }}')"></i>
                                     <br/>
                                    Vie :
-                                    <i class="icon ion-heart" style="font-size:2em!important;color:#d4ff2a!important;"></i>
-                                    <i class="icon ion-heart" style="font-size:2em!important;color:#d4ff2a!important;"></i>
-                                    <i class="icon ion-heart" style="font-size:2em!important;color:#34495e;"></i>
-                                    <i class="icon ion-heart " style="font-size:2em!important;color:#34495e;"></i>
+                                           <i ng-repeat="heart in child.hearts" ng-class="GetHeartsLevel('{{ heart }}')"></i>
                                 </span>
                             </p>
                         </div>
 
                         <div class = "col">
-                            <i class="icon ion-heart energized animated infinite bounce" style="color:#34495e;font-size:3em!important;"></i>
+                            <i class="icon ion-heart energized" style="color:#34495e;font-size:3em!important;"></i>
                         </div>
                     </div>
 

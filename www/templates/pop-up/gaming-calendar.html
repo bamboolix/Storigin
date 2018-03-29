@@ -1,7 +1,7 @@
 <style>
     .item
     {
-        background-color: #e55039;
+        background-color: #d4ff2a;
         color: #ffffff;
         position: relative;
         z-index: 2;
@@ -16,23 +16,23 @@
 
     .popup-container .popup
     {
-       background-color: #e55039!important;
+       background-color: #d4ff2a!important;
     }
 
 </style>
 <div class="popup-head">
-    <h3 class="popup-title" style="background-color:#e55039!important;color:#ffffff;font-size:2em">
+    <h3 class="popup-title" style="background-color:#d4ff2a!important;color:#000000;font-size:2em">
        Créneau hebdomadaire
         <br/>
     </h3>
-    <i class="icon ion-android-stopwatch" style="font-size:3em!important;color:#ffffff;"></i>
+    <i class="icon ion-android-stopwatch" style="font-size:3em!important;color:#000000;"></i>
 </div>
 
 <form ng-submit="SetChildCalendar()" style='border-width:0px;'>
     <ul class="list">
         <li class="item item-toggle">
-            LUNDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;">LUNDI</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="monday" ng-model="calendarData.monday">
                 <div class="track">
                     <div class="handle"></div>
@@ -40,8 +40,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            MARDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;"> MARDI</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="tuesday" ng-model="calendarData.tuesday">
                 <div class="track">
                     <div class="handle"></div>
@@ -49,8 +49,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            MERCRDEDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;"> MERCRDEDI</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="wednesday" ng-model="calendarData.wednesday">
                 <div class="track">
                     <div class="handle"></div>
@@ -58,8 +58,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            JEUDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;"> JEUDI</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="thursday" ng-model="calendarData.thursday">
                 <div class="track">
                     <div class="handle"></div>
@@ -67,8 +67,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            VENDREDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;"> VENDREDI </span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="friday" ng-model="calendarData.friday">
                 <div class="track">
                     <div class="handle"></div>
@@ -76,8 +76,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            SAMEDI
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;">SAMEDI</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="saturday" ng-model="calendarData.saturday">
                 <div class="track">
                     <div class="handle"></div>
@@ -85,8 +85,8 @@
             </label>
         </li>
         <li class="item item-toggle">
-            DIMANCHE
-            <label class="toggle toggle-assertive">
+            <span style="color:#000000;">DIMANCHE</span>
+            <label class="toggle toggle-calm">
                 <input type="checkbox" name="sunday" ng-model="calendarData.sunday">
                 <div class="track">
                     <div class="handle"></div>
@@ -95,11 +95,7 @@
         </li>
     </ul>
 
-    <button class="button button-block button-positive" style="background-color:#e55039!important;color:#ffffff;font-size:2em">
-        se connecter
+    <button class="button button-block button-positive" style="background-color:#d4ff2a!important;color:#000000;font-size:2em">
+        enregistrer
     </button>
 </form>
-
-<!--<a class="button button-full " style="background-color:#e55039!important;color:#ffffff;font-size:2em" ng-click="closePopup()">
-    valider
-</a>-->
