@@ -52,6 +52,17 @@ angular.module('StoriginAcademy', ['ionic', 'StoriginAcademy.controllers'])
         controller: 'AppCtrl'
      }
   )
+  .state('app.firstConnexion',
+      {
+        url: '/firstConnexion',
+        views: {
+          'menuContent':
+          {
+            templateUrl: 'templates/firstConnexion.html',
+            controller: 'FirstConnexionCtrl'
+          }
+        }
+  })
   .state('app.parents',
   {
     url: '/parents',

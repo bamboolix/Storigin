@@ -7,7 +7,7 @@ angular.module('StoriginAcademy.controllers').controller( 'LoginCtrl', function(
 
     if( localStorage.getItem( "password" ) && localStorage.getItem( "email") )
     {
-         console.log("STORIGIN - Mot de passe trouvé");
+         console.log("STORIGIN - Mot de passe trouvé" );
          console.log("STORIGIN - Adresse de email trouvé");
 
          $scope.loginData.password = localStorage.getItem( "password" );

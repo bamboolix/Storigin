@@ -62,7 +62,6 @@ angular.module('StoriginAcademy.controllers').controller('AppCtrl', function($sc
    $scope.setChildColor = function (color)
    {
         $scope.ChildColor = color;
-        console.log(color);
         $scope.createChildData.color = color;
         $("#childcolor").css('background-color', color);
    }
@@ -91,7 +90,6 @@ angular.module('StoriginAcademy.controllers').controller('AppCtrl', function($sc
     $scope.modalregister.show();
   };
 
-
 /**
    * Function openInformation()
    * Ouverture de la fenêtre modal d'information. Affichage de la version, de la beta, information sur Storigin
@@ -99,9 +97,9 @@ angular.module('StoriginAcademy.controllers').controller('AppCtrl', function($sc
    * @param {void} Aucun paramètre
    */
 
-  $scope.openInformation = function()
+  $scope.openAssistance = function()
   {
-    $scope.modalinformation.show();
+    $state.go("app.firstConnexion");
   };
 
 

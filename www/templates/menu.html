@@ -22,6 +22,11 @@
       background-color:#34495e!important;
     }
 
+@font-face {
+    font-family: ScriptFont;
+    src: url(fonts/JaliscoDemo.ttf);
+}
+
     .popup-container .popup {
     width: 350px;
     max-height: 90%;
@@ -69,9 +74,11 @@
 
       <ion-nav-buttons side="right">
 
-        <span class="badge badge-assertive" ng-click="openInformation()">
+        <button class="button button-icon button-clear ion-ios-information" style="color:#ffffff;" ng-click="openAssistance()">
+        </button>
+        <!--<span class="badge badge-assertive" ng-click="openInformation()">
           0
-        </span>
+        </span>-->
 
         <button class="button button-icon button-clear ion-person-add" style="color:#ffffff;" menu-toggle="right">
         </button>
@@ -115,7 +122,7 @@
 
   <ion-side-menu side="right" style="text-align:center!important">
 
-    <ion-header-bar class="bar-stable" style="text-align:center!important">
+    <ion-header-bar class="bar-stable" style="font-family:ScriptFont!important;text-align:center!important">
       <h1 class="title">
         Ajouter un enfant
       </h1>
@@ -126,7 +133,7 @@
         <form ng-submit="createChild()" style='border'>
 
         <label class="item item-input" style="margin:0px!important;padding:0px!important;">
-          <input type="text" placeholder="Nom" ng-model="createChildData.nom">
+          <input type="text" placeholder="Nom" style="font-family:ScriptFont!important;font-size:3em!important;" ng-model="createChildData.nom">
         </label>
 
        <!-- <label class="item item-input" style="margin-top:10px!important;margin-bottom:10px!important;padding:0px!important;">
@@ -138,7 +145,7 @@
         </label>
       -->
         <label class="item item-input" style="margin-top:10px!important;margin-bottom:10px!important;padding:0px!important;color:#e74c3c">
-          date de naissance : <input id="birthdate" placeholder="Date de naissance" ng-change="setBirthdate()" value="0000-00-0" ng-model="createChildData.birthdate" type="date">
+          date de naissance : <input id="birthdate"   ng-change="setBirthdate()" value="0000-00-0" ng-model="createChildData.birthdate" type="date">
         </label>
 
           <div class="button-bar" style="margin-top:10px!important;margin-bottom:0px!important;padding:0px!important;">

@@ -1,0 +1,115 @@
+
+<style>
+    .slider-pager .slider-pager-page
+    {
+       color: #ffffff!important;
+    }
+
+      <style>
+    .bar.bar-stable
+    {
+      border-color: #b2b2b2;
+      background-color: #2c3e50;
+      color: #ffffff;
+    }
+    .item .item-content
+    {
+      border-color: #b2b2b2;
+      background-color: #2c3e50;
+      color: #ffffff;
+    }
+    .bar.bar-stable .title
+    {
+      color:#ffffff;
+    }
+
+    ion-item
+    {
+      background-color:#34495e!important;
+    }
+
+    .popup-container .popup {
+    width: 350px;
+    max-height: 90%;
+    padding: 0px;
+    border-radius: 0px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #34495e!important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align:center;
+}
+
+@font-face {
+    font-family: ScriptFont;
+    src: url(fonts/JaliscoDemo.ttf);
+}
+
+.popup-head
+{
+    padding: 15px 10px;
+    border-bottom: 0px solid #eee;
+    text-align: center;
+}
+</style>
+<ion-view left-buttons="leftButtons" view-title="Aide à l'utilisation" hide-nav-bar="false" style="height:100%!important;text-align:center!important;background-color:#34495e!important;color:#ffffff">
+    <ion-slide-box on-slide-changed="slideChanged(index)" style="padding-bottom:100px!important;">
+        <ion-slide>
+            <div>
+                <div style="color:#34495e; font-size:1.5em">Tadaaaaaaa !</div>
+                <img src="img/family.svg" style="width:300px!important;height:300!important;" class="animate tada">
+            </div>
+            <p style="font-size:5em;color:#d4ff2a;font-family:ScriptFont;"> Merci  <i class="icon ion-ios-heart" style="color:#b71540"></i> ! </p>
+            <p style="padding-top:20px; "> Vous venez d'installer l'application <b style="color:#d4ff2a;">StoriginAcademy</b> avec succès ! <br/>Par chance nous vous avons préparé une aide à la première utilisation, parceque nous vous aimons trop !</p>
+        </ion-slide>
+        <ion-slide>
+            <div>
+                <div style="padding-bottom:30px!important;">
+                    <img src="img/iphone-menu.svg" style="width:300px!important;" class="">
+                    <br/>
+                    <span style="color:#ffffff; font-size:1.5em">Etape 1</span>
+                </div>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div>
+                    <div style="padding-bottom:30px!important;">
+                    <img src="img/iphone.svg" style="width:300px!important;" class="">
+                        <div style="color:#ffffff; font-size:1.5em">Etape 2</div>
+                    </div>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div>
+                <div style="padding-bottom:30px!important;">
+                    <img src="img/iphone-parent.svg" style="width:300px!important;" class="">
+                    <div style="color:#ffffff; font-size:1.5em;padding:10px!important;">Etape 3</div>
+
+                </div>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div>
+                <div style="padding-bottom:30px!important;">
+                    <img src="img/iphone-kids.svg" style="width:300px!important;" class="">
+                    <div style="color:#ffffff; font-size:1.5em;padding:10px!important;">Etape 4</div>
+                    <button ng-click="Start()"class="button button-block item-end icon-left" style="border-color:#d4ff2a;background-color:#d4ff2a!important;color:#000000">
+                        C'est parti !
+                    </button>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>

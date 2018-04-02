@@ -1,4 +1,4 @@
-<ion-view view-title="Enfants" style="background-color:#34495e!important;">
+<ion-view view-title="Enfants" style="background-color:#34495e!important;"  hide-back-button="true">
 
     <style>
         .item .item-content
@@ -74,7 +74,7 @@
 
                     <ion-option-button style="font-size:5em!important;" class="button-light icon ion-heart"></ion-option-button>
                     <ion-option-button style="font-size:5em!important;" class="button-light icon ion-email"></ion-option-button>
-                    <ion-option-button style="font-size:5em!important;" class="button-assertive icon ion-trash-a"></ion-option-button>
+                    <ion-option-button style="font-size:5em!important;" class="button-assertive icon ion-trash-a" ng-click="DeleteAccount({{child.child_id}})"></ion-option-button>
                 </ion-item>
         </ion-list>
     </ion-content>
