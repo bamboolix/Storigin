@@ -1,5 +1,5 @@
 
-angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', function($scope, $ionicPopup, $stateParams , $http, $rootScope )
+angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', function($scope, $state, $ionicPopup, $stateParams , $http, $rootScope )
 {
 
 
@@ -127,4 +127,17 @@ angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', func
     });
     Popup.close();
   }
+
+
+   /**
+     * Function showmodifychild()
+     * Ouverture de la vue pour modifier l'enfant
+     * @author Florian Farcy
+     * @param {void} Aucun paramètre
+     */
+
+    $scope.showmodifychild = function()
+    {
+      $state.go( 'app.modify-child')
+    };
 });

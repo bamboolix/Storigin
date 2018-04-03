@@ -1,0 +1,36 @@
+<ion-view view-title="Modification profil" style="background-color:#34495e!important;">
+
+  <ion-content style="text-align:center!important">
+    <div >
+    <img width="300px" height="300px" src="img/invite.svg" class="animated pulse infinite" style="padding-bottom:50px!important;" />
+
+
+      <label class="item item-input">
+        <input placeholder="Nom" name="nom" type="text" ng-model="registerData.nom">
+      </label>
+
+      <label class="item item-input">
+        <input placeholder="Prenom" name="newprenom" type="text" ng-model="registerData.newprenom">
+      </label>
+
+      <label class="item item-input">
+        <input placeholder="Email" name="newemail" type="text" ng-model="registerData.newemail">
+      </label>
+
+      <label class="item item-input">
+        <input placeholder="Mot de passe" name="newpassword" type="password" ng-model="registerData.newpassword">
+      </label>
+
+      <ion-list>
+        <ion-radio ng-model="choice" ng-value="'A'" style="background-color:#34495e!important;">Homme</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'B'" style="background-color:#34495e!important;">Femme</ion-radio>
+      </ion-list>
+
+      <label class="item" style="background-color:#34495e!important; border-width:0px!important;" >
+        <button class="button button-block button-positive" style="border-color:#2c3e50;background-color:#34495e!important;color:#ffffff" ng-click="closeModifyProfile()">
+          Valider
+        </button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

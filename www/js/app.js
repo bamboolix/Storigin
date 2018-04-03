@@ -99,12 +99,66 @@ angular.module('StoriginAcademy', ['ionic', 'StoriginAcademy.controllers'])
     })
     .state('app.childdetail',
     {
-    // DAVN définition des paramètres de l'URL via un QueryParameter : https://github.com/angular-ui/ui-router/wiki/URL-Routing
       url: '/childdetail?detailedchildid&detailedchildcolor&detailedchildpseudo?detailedchildage',
       views: {
         'menuContent': {
           templateUrl: 'templates/childdetail.html',
           controller: 'ChildDetailCtrl'
+        }
+      }
+    })
+    .state('app.friends',
+    {
+      url: '/friends',
+      views: {
+       'menuContent':
+       {
+              templateUrl: 'templates/friends.html',
+              controller: 'FriendsCtrl'
+        }
+      }
+    })
+    .state('app.invitation',
+    {
+    url: '/invitation',
+    views:{
+      'menuContent':
+        {
+            templateUrl: 'templates/invitation.html',
+            controller: 'InvitationCtrl'
+        }
+      }
+    })
+    .state('app.invited',
+    {
+    url: '/invited',
+    views:
+    {
+      'menuContent':
+       {
+            templateUrl: 'templates/invited.html',
+            controller: 'InvitedCtrl'
+        }
+      }
+    })
+    .state('app.modify-child',
+    {
+    url: '/modify-child',
+    views:{
+      'menuContent':
+        {
+            templateUrl: 'templates/modify-child.html',
+            controller: 'ModifyChildCtrl'
+        }
+      }
+    })
+    .state('app.modifyp-rofile',
+    {
+    url: '/modify-profile',
+    views:{
+      'menuContent':{
+        templateUrl: 'templates/modify-profile.html',
+        controller: 'ModifyProfileCtrl'
         }
       }
     });

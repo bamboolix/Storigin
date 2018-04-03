@@ -172,6 +172,8 @@ $scope.createChild = function()
        else if( response.data.status == 201 )
        {
             $scope.message = response.data.result;
+            // emission de l'évneement updateHomeListEvent destiné au controlleur de la home qui contient notamment la liste des enfants.
+            $rootScope.$broadcast( 'updateHomeListEvent', { value : 1});
             openPopup();
        }
        else if ( response.data.status == 400 )
@@ -376,5 +378,15 @@ $scope.createChild = function()
         RegisterWarning.close();
       };
 
+   /**
+     * Function showmodifyprofile()
+     * Ouverture de la vue pour modifier le profil
+     * @author Florian Farcy
+     * @param {void} Aucun paramètre
+     */
 
+    $scope.showmodifyprofile = function()
+    {
+      $state.go( 'app.modify-profile')
+    };
 });

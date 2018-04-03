@@ -1,4 +1,4 @@
-angular.module('StoriginAcademy.controllers').controller( 'ParentsCtrl', function( $scope , $http, $stateParams , $timeout, $rootScope , $ionicPopup )
+angular.module('StoriginAcademy.controllers').controller( 'ParentsCtrl', function( $scope , $http, $state, $stateParams , $timeout, $rootScope , $ionicPopup )
 {
 
   /*
@@ -93,5 +93,42 @@ angular.module('StoriginAcademy.controllers').controller( 'ParentsCtrl', functio
       {
         InvitationWarning.close();
       };
+
+  /**
+     * Function closeBirthdayWarningPopup()
+     * Fermeture de la fenêtre popup en cas de nom non renseignée
+     * @author Florian Farcy
+     * @param {void} Aucun paramètre
+     */
+
+      $scope.showfriends = function()
+      {
+        $state.go( 'app.friends')
+      }
+
+  /**
+     * Function closeBirthdayWarningPopup()
+     * Fermeture de la fenêtre popup en cas de nom non renseignée
+     * @author Florian Farcy
+     * @param {void} Aucun paramètre
+     */
+      $scope.showinvitation = function()
+      {
+        $state.go( 'app.invitation')
+      }
+
+  /**
+     * Function closeBirthdayWarningPopup()
+     * Fermeture de la fenêtre popup en cas de nom non renseignée
+     * @author Florian Farcy
+     * @param {void} Aucun paramètre
+     */
+
+      $scope.showinvited = function()
+      {
+        $state.go( 'app.invited')
+      };
+
+
 
 });

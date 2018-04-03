@@ -19,14 +19,13 @@ angular.module('StoriginAcademy.controllers').controller( 'HomeCtrl', function( 
        });
 
 
-    $http.post("https://storigin.fr/storiginapi/", { action: 'getChildren' , parentid : $rootScope.parentid } , { headers: {'Content-Type': 'application/json'} } )
-    .then(function ( response )
-    {
-         console.log(response.data.result);
-         $scope.children = response.data.result;
-    });
+        $http.post("https://storigin.fr/storiginapi/", { action: 'getChildren' , parentid : $rootScope.parentid } , { headers: {'Content-Type': 'application/json'} } )
+        .then(function ( response )
+        {
+             $scope.children = response.data.result;
+        });
 
-    $timeout(closeHomeMessagePopup, 2000);
+        $timeout(closeHomeMessagePopup, 2000);
     }
 
    /**
@@ -52,7 +51,6 @@ angular.module('StoriginAcademy.controllers').controller( 'HomeCtrl', function( 
           $http.post("https://storigin.fr/storiginapi/", { action: 'DeleteChild' , childid : childid } , { headers: {'Content-Type': 'application/json'} } )
           .then(function ( response )
           {
-               console.log(response.data.result);
                $scope.message = response.data.result;
                openHomeMessagePopup();
           });
@@ -158,4 +156,16 @@ angular.module('StoriginAcademy.controllers').controller( 'HomeCtrl', function( 
    $scope.$on('popover.removed', function() {
       // Execute action
    });
+
+   $scope.$on('updateHomeListEvent', function(event, args)
+   {
+
+        $http.post("https://storigin.fr/storiginapi/", { action: 'getChildren' , parentid : $rootScope.parentid } , { headers: {'Content-Type': 'application/json'} } )
+        .then(function ( response )
+        {
+             $scope.children = response.data.result;
+        });
+        console.log( "Storigin : mise à jour de la liste des enfants" );
+   });
+
 });
