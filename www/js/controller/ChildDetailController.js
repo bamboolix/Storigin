@@ -1,14 +1,15 @@
 
 angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', function($scope, $state, $ionicPopup, $stateParams , $http, $rootScope )
 {
+    PlayTimer.reset();
+    PlayTimer.start({callback: function (timer)
+    {
+       //if ( timer.getTimeValues() ) );
+    }});
 
-
-  var PlayTimer = new Timer();
-
-  PlayTimer.start();
-  PlayTimer.addEventListener('secondsUpdated', function ( e )
+  PlayTimer.addEventListener( 'secondsUpdated', function ( e )
   {
-        $('#PlayeTimer').html(PlayTimer.getTimeValues().toString());
+        $('#PlayeTimer').html( PlayTimer.getTimeValues().toString() );
   });
 
   $scope.calendarData = { "action" : "childCalendar" };
@@ -21,12 +22,35 @@ angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', func
   $scope.color = $stateParams.detailedchildcolor;
   $scope.pseudo = $stateParams.detailedchildpseudo;
   $scope.age = $stateParams.detailedchildage;
-  $scope.conseils = "X h / jour";
-  $scope.attention = "l'identité numérique";
 
-/*  $scope.calendarData.monday = true;
-  $scope.calendarData.tuesday = true;
-*/
+  if (  parseInt( $scope.age ) < 3 )
+  {
+    $scope.conseils = "Eviter les écrans";
+    $scope.attention = "Facetime / Skype avec les parents";
+
+    console.log( parseInt( $scope.age ) );
+  }
+  else if (  3 < parseInt( $scope.age )  < 6 )
+  {
+    $scope.conseils = "moins d'une 1h / jour";
+    $scope.attention = "Jeu libre/interaction sociale";
+    console.log( parseInt( $scope.age ) );
+  }
+  else if (  6 < parseInt( $scope.age )  < 13 )
+  {
+    $scope.conseils = "2 h / jour";
+    $scope.attention = "Activités physiques / Sommeil";
+    console.log( parseInt( $scope.age ) );
+  }
+  else if (  parseInt( $scope.age )  > 13 )
+    {
+      $scope.conseils = "Utilisation raisonnée";
+      $scope.attention = "Décidez des moments avec écrans";
+      console.log( parseInt( $scope.age ) );
+    }
+
+
+
 
   $http.post("https://storigin.fr/storiginapi/",  $scope.GetChildCalendar , { headers: {'Content-Type': 'application/json'} } )
   .then(function ( response )
@@ -130,14 +154,14 @@ angular.module('StoriginAcademy.controllers').controller('ChildDetailCtrl', func
 
 
    /**
-     * Function showmodifychild()
+     * Function ShowModifyChild()
      * Ouverture de la vue pour modifier l'enfant
      * @author Florian Farcy
      * @param {void} Aucun paramètre
      */
 
-    $scope.showmodifychild = function()
+    $scope.ShowModifyChild = function()
     {
-      $state.go( 'app.modify-child')
+      $state.go( 'app.modify-child', { detailedchildid : $scope.childid, detailedchildcolor : $scope.color , detailedchildpseudo : $scope.pseudo , detailedchildage : $scope.age } );
     };
 });

@@ -1,6 +1,13 @@
 angular.module('StoriginAcademy.controllers').controller( 'HomeCtrl', function( $timeout, $scope , $http, $stateParams , $rootScope, $state, $ionicPopover, $ionicPopup )
 {
 
+    // Si le cookie firstConnexion n'est pas présent on va à l'aide à l'utilisation
+
+    if( !localStorage.getItem( "firstConnexion" )  )
+    {
+          $state.go( 'app.firstConnexion' );
+    }
+
    var HomeWarning;
 
   /**
@@ -54,13 +61,6 @@ angular.module('StoriginAcademy.controllers').controller( 'HomeCtrl', function( 
                $scope.message = response.data.result;
                openHomeMessagePopup();
           });
-    }
-
-    // Si le cookie firstConnexion n'est pas présent on va à l'aide à l'utilisation
-
-    if( localStorage.getItem( "firstConnexion" )  )
-    {
-          $state.go( 'app.firstConnexion' );
     }
 
     $http.post("https://storigin.fr/storiginapi/", { action: 'getChildren' , parentid : $rootScope.parentid } , { headers: {'Content-Type': 'application/json'} } )

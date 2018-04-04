@@ -20,6 +20,11 @@ angular.module('StoriginAcademy.controllers').controller( 'LoginCtrl', function(
                        {
                              $scope.createChildData.parentid = response.data.parentid;
                              $rootScope.parentid = response.data.parentid;
+                             $rootScope.parentnom = response.data.nom;
+                             $rootScope.parentprenom = response.data.prenom;
+                             $rootScope.password = localStorage.getItem( "password" );
+                             $rootScope.email = localStorage.getItem( "email" );
+
                              if ( typeof( Storage ) !== "undefined" )
                              {
                                  localStorage.setItem("password", $scope.loginData.password );

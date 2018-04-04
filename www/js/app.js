@@ -143,7 +143,7 @@ angular.module('StoriginAcademy', ['ionic', 'StoriginAcademy.controllers'])
     })
     .state('app.modify-child',
     {
-    url: '/modify-child',
+    url: '/modify-child?detailedchildid&detailedchildcolor&detailedchildpseudo?detailedchildage',
     views:{
       'menuContent':
         {
@@ -152,7 +152,7 @@ angular.module('StoriginAcademy', ['ionic', 'StoriginAcademy.controllers'])
         }
       }
     })
-    .state('app.modifyp-rofile',
+    .state('app.modify-profile',
     {
     url: '/modify-profile',
     views:{
