@@ -9,7 +9,7 @@ angular.module('StoriginAcademy.controllers').controller( 'ModifyChildCtrl', fun
     .then(function ( response ){
         if ( response.data.status == 200 )
         {
-            $scope.updateChildData = reponse.data.result;
+            $scope.updateChildData = response.data.result;
         }
    });
 
